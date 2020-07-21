@@ -1,14 +1,18 @@
-# Easy Email ![Size](https://github-size-badge.herokuapp.com/ryanbahan/easy-email-2020.svg)
+### UPDATE: As of June 2020, Easy Email will no longer be supporting tone analysis via machine learning. I hope to revisit this concept in the future, but for now it's not financially feasible to continue using IBM Watson for this feature. If you're experienced in ML and interested in working on this, please reach out!
 
-Contributors: [Ryan Bahan](https://github.com/ryanbahan)
+# Easy Email ![Size](https://github-size-badge.herokuapp.com/ryanbahan/easy-email.svg)
+
+**[USE THE APP HERE!](https://ryanbahan.github.io/easy-email-2020/)**
+
+Built by [Ryan Bahan](https://github.com/ryanbahan)
+
+![image](https://user-images.githubusercontent.com/54119863/79816698-106e5300-8341-11ea-8a59-8334843901e6.png)
 
 1. [Abstract](#1-abstract)
 2. [Technology](#2-technology)
 3. [Installation](#3-installation)
 4. [Installation](#4-testing)
 5. [Deployment](#5-deployment)
-
-![image](https://user-images.githubusercontent.com/54119863/79816698-106e5300-8341-11ea-8a59-8334843901e6.png)
 
 ### 1. Abstract
 
