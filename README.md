@@ -2,8 +2,6 @@
 
 # Easy Email ![Size](https://github-size-badge.herokuapp.com/ryanbahan/easy-email.svg)
 
-**[USE THE APP HERE!](https://ryanbahan.github.io/easy-email-2020/)**
-
 Built by [Ryan Bahan](https://github.com/ryanbahan)
 
 ![image](https://user-images.githubusercontent.com/54119863/79816698-106e5300-8341-11ea-8a59-8334843901e6.png)
