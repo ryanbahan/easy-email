@@ -1,4 +1,4 @@
-import { ErrorReducer } from './ErrorReducer';
+import { errorReducer } from './errorReducer';
 
 describe("errorReducer", () => {
 

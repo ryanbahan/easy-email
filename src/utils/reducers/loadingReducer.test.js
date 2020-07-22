@@ -1,4 +1,4 @@
-import { LoadingReducer } from './LoadingReducer';
+import { loadingReducer } from './loadingReducer';
 
 describe("loadingReducer", () => {
 

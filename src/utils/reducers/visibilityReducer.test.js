@@ -1,4 +1,4 @@
-import { VisibilityReducer } from './VisibilityReducer';
+import { visibilityReducer } from './visibilityReducer';
 import { DefaultVisibilityState } from '../Templates/DefaultVisibilityState';
 
 describe("visibilityReducer", () => {

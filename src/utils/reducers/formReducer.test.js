@@ -1,4 +1,4 @@
-import { FormReducer } from './FormReducer';
+import { formReducer } from './formReducer';
 import { DefaultState } from '../Templates/DefaultState';
 
 describe("formReducer", () => {

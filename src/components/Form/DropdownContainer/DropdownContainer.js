@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './DropdownContainer.css';
 import Dropdown from '../Dropdown/Dropdown';
 import { connect } from 'react-redux';
-import { toggleVisibility } from '../../../utils/Actions';
+import { toggleVisibility } from '../../../utils/actions';
 import PropTypes from 'prop-types';
 
 const DropdownContainer = ({ toggleVisibility, title, active, formItems }) => {

@@ -46,6 +46,7 @@
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^4.2.4",
+    "case-sensitive-paths-webpack-plugin": "^2.3.0",
     "gh-pages": "^2.2.0"
   }
 }
