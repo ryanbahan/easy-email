@@ -1,28 +1,28 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { clearError } from '../../utils/actions';
 import './ErrorPage.css';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-class ErrorPage extends React.Component {
+const ErrorPage = ({ clearError, error }) => {
 
-  componentWillUnmount() {
-    this.props.clearError();
-  }
+  useEffect(() => {
+    return function cleanup() {
+      clearError();
+    };
+  });
 
-  render() {
-      return (
-      <section className="error-wrapper">
-        <div className="error-block">
-          <p>{this.props.error}</p>
-          <Link to="/">
-            <button>Back to dashboard ></button>
-          </Link>
-        </div>
-      </section>
-    )
-  }
+  return (
+  <section className="error-wrapper">
+    <div className="error-block">
+      <p>{ error }</p>
+      <Link to="/">
+        <button>Back to dashboard ></button>
+      </Link>
+    </div>
+  </section>
+  )
 }
 
 const mapStateToProps = state => ({
