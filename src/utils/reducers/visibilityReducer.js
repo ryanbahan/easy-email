@@ -1,4 +1,4 @@
-import { DefaultVisibilityState } from '../Templates/DefaultVisibilityState';
+import { DefaultVisibilityState } from '../templates/DefaultVisibilityState';
 
 export const visibilityReducer = (state = DefaultVisibilityState, action) => {
   switch (action.type) {

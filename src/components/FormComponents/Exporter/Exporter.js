@@ -1,5 +1,5 @@
 import React from 'react';
-import { head, bodyTop, bottom } from '../../../utils/EmailHTML';
+import { head, bodyTop, bottom } from '../../../utils/emailHTML';
 
 const Exporter = () => {
 
