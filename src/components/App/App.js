@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Builder } from '../FormComponents/Builder/Builder';
-import PreviewContainer from '../EmailPreviewComponents/PreviewContainer/PreviewContainer';
+import { Builder } from '../Form/Builder/Builder';
+import PreviewContainer from '../EmailPreview/PreviewContainer/PreviewContainer';
 import { DefaultTemplate } from '../../utils/Templates/DefaultTemplate';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import { Route, Redirect } from 'react-router-dom';
@@ -9,10 +9,10 @@ import { connect } from 'react-redux';
 import Analyzer from '../Analyzer/Analyzer';
 import PropTypes from 'prop-types';
 
-const App = (props) => {
+const App = ({ error }) => {
   return (
       <div className="App">
-        {props.error && <Redirect to="/error" />}
+        {error && <Redirect to="/error" />}
         <Route exact path="/">
           <Builder menus={DefaultTemplate} />
           <PreviewContainer />

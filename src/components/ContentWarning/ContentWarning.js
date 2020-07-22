@@ -2,9 +2,9 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { clearWarning } from '../../utils/actions';
 import PropTypes from 'prop-types';
-import './WarningModal.css';
+import './ContentWarning.css';
 
-const WarningModal = ({ warning, clearWarning }) => {
+const ContentWarning = ({ warning, clearWarning }) => {
 
   useEffect(() => {
     return function cleanup() {
@@ -27,7 +27,7 @@ const mapDispatchToProps = dispatch => ({
   clearWarning: () => dispatch(clearWarning()),
 })
 
-WarningModal.propTypes = {
+ContentWarning.propTypes = {
   error: PropTypes.oneOfType([
   PropTypes.string,
   PropTypes.bool
@@ -35,4 +35,4 @@ WarningModal.propTypes = {
   clearWarning: PropTypes.func,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(WarningModal);
+export default connect(mapStateToProps, mapDispatchToProps)(ContentWarning);

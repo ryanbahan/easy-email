@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { update, hasWarning, clearWarning } from '../../../utils/actions';
 import './ButtonCopyField.css';
 import PropTypes from 'prop-types';
-import WarningModal from '../../WarningModal/WarningModal';
+import WarningModal from '../../ContentWarning/ContentWarning';
 
 const ButtonCopyField = ({ constraints, hasWarning, store, clearWarning, update, content, warning }) => {
   const [state, setState] = useState({ active: false })

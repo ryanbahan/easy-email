@@ -4,7 +4,7 @@ import { update, hasWarning, clearWarning } from '../../../utils/actions';
 import './TextField.css';
 import PropTypes from 'prop-types';
 import ReactQuill from 'react-quill';
-import WarningModal from '../../WarningModal/WarningModal';
+import WarningModal from '../../ContentWarning/ContentWarning';
 import 'react-quill/dist/quill.snow.css';
 
 const TextField = ({ content, constraints, hasWarning, clearWarning, update, store, warning }) => {
