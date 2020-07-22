@@ -1,4 +1,4 @@
-export const requestTones = async (content) => {
+export const RequestTones = async (content) => {
   const parseTones = tones => {
     const documentTones = tones.document_tone.tones;
     return documentTones;

@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { isLoading, hasError } from '../../utils/actions';
-import { createChart } from '../../utils/createChart';
-import { requestTones } from '../../utils/requestTones';
+import { CreateChart } from '../../utils/CreateChart';
+import { RequestTones } from '../../utils/RequestTones';
 import './Analyzer.css';
 import EmailImageTagline from '../EmailPreviewComponents/EmailImageTagline/EmailImageTagline';
 import EmailContent from '../EmailPreviewComponents/EmailContent/EmailContent';
@@ -23,19 +23,19 @@ class Analyzer extends React.Component {
     this.props.isLoading(true);
 
     try {
-      const contentTones = await requestTones(this.props.content);
-      const taglineTones = await requestTones(this.props.tagline);
-      const taglineButtonTones = await requestTones(this.props.tagLineButton);
+      const contentTones = await RequestTones(this.props.content);
+      const taglineTones = await RequestTones(this.props.tagline);
+      const taglineButtonTones = await RequestTones(this.props.tagLineButton);
       const taglineAndButtonTones = taglineTones.concat(taglineButtonTones);
-      const ctaTones = await requestTones(this.props.cta);
+      const ctaTones = await RequestTones(this.props.cta);
 
       const contentRef = this.contentRef.current.getContext("2d");
       const taglineRef = this.taglineRef.current.getContext("2d");
       const ctaRef = this.ctaRef.current.getContext("2d");
 
-      createChart(contentRef, contentTones, "doughnut");
-      createChart(taglineRef, taglineAndButtonTones);
-      createChart(ctaRef, ctaTones);
+      CreateChart(contentRef, contentTones, "doughnut");
+      CreateChart(taglineRef, taglineAndButtonTones);
+      CreateChart(ctaRef, ctaTones);
     } catch(err) {
       this.props.hasError(err);
     }
