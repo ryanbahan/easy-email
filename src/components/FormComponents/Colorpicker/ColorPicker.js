@@ -1,45 +1,32 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { update } from '../../../utils/actions';
 import PropTypes from 'prop-types';
 import CustomPicker from './CustomPicker';
 
-class ColorPicker extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      displayColorPicker: false,
-      background: '#fff'
-    };
-  }
+const ColorPicker = ({ update, store }) => {
+  const [state, setState] = useState({ displayColorPicker: false, background: '#fff' })
 
-  handleClick = () => {
-    this.setState({ displayColorPicker: !this.state.displayColorPicker })
+  const handleClick = () => {
+    setState({ ...state, displayColorPicker: !state.displayColorPicker })
   };
 
-  handleChange = (color) => {
-    this.setState({ background: color.hex });
-    this.props.update({[this.props.store]: color.hex});
+  const handleChange = (color) => {
+    setState({ ...state, background: color.hex });
+    update({[store]: color.hex});
   };
 
-  handleClose = () => {
-    this.setState({ displayColorPicker: false })
-  };
-
-  render() {
-
-    return (
-      <>
-        <button onClick={ this.handleClick } style={{cursor: "pointer"}}>Pick Color</button>
-        { this.state.displayColorPicker ? <div style={{flexBasis: "100%", display: "flex", justifyContent: "flex-end", marginBottom: "1rem"}}>
-          <CustomPicker
-            onChange={ this.handleChange }
-            color={ this.state.background }
-          />
-        </div> : null }
-      </>
-    )
-  }
+  return (
+    <>
+      <button onClick={ handleClick } style={{cursor: "pointer"}}>Pick Color</button>
+      { state.displayColorPicker ? <div style={{flexBasis: "100%", display: "flex", justifyContent: "flex-end", marginBottom: "1rem"}}>
+        <CustomPicker
+          onChange={ handleChange }
+          color={ state.background }
+        />
+      </div> : null }
+    </>
+  )
 }
 
 const mapDispatchToProps = dispatch => ({
