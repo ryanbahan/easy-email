@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { FormContainer } from '../FormComponents/FormContainer/FormContainer';
+import { FormContainer } from '../Form/FormContainer/FormContainer';
 import PreviewContainer from '../EmailPreview/PreviewContainer/PreviewContainer';
 import { DefaultTemplate } from '../../utils/Templates/DefaultTemplate';
 import ErrorPage from '../ErrorPage/ErrorPage';
