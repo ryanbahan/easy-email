@@ -1,16 +1,16 @@
 import { combineReducers } from 'redux';
-import { formReducer } from './formReducer';
-import { visibilityReducer } from './visibilityReducer';
-import { loadingReducer } from './loadingReducer';
-import { errorReducer } from './errorReducer';
-import { warningReducer } from './warningReducer';
+import { FormReducer } from './FormReducer';
+import { VisibilityReducer } from './VisibilityReducer';
+import { LoadingReducer } from './LoadingReducer';
+import { ErrorReducer } from './ErrorReducer';
+import { WarningReducer } from './WarningReducer';
 
 const rootReducer = combineReducers({
-  form: formReducer,
-  visibility: visibilityReducer,
-  loading: loadingReducer,
-  error: errorReducer,
-  warning: warningReducer,
+  form: FormReducer,
+  visibility: VisibilityReducer,
+  loading: LoadingReducer,
+  error: ErrorReducer,
+  warning: WarningReducer,
 });
 
 export default rootReducer;

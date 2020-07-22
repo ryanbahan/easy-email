@@ -1,11 +1,11 @@
-import { formReducer } from './formReducer';
+import { FormReducer } from './FormReducer';
 import { DefaultState } from '../Templates/DefaultState';
 
 describe("formReducer", () => {
 
   it("should return the initial state", () => {
     const expected = DefaultState;
-    const result = formReducer(undefined, {});
+    const result = FormReducer(undefined, {});
     expect(expected).toEqual(result);
   })
 
@@ -27,7 +27,7 @@ describe("formReducer", () => {
       headerBGColor: "#ffffff",
     };
 
-    const result = formReducer(DefaultState, {
+    const result = FormReducer(DefaultState, {
       type: "UPDATE", payload: {companyName: "Figma"}
     });
     expect(expected).toEqual(result);

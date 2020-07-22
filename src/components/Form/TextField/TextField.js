@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
-import { update, hasWarning, clearWarning } from '../../../utils/actions';
+import { update, hasWarning, clearWarning } from '../../../utils/Actions';
 import './TextField.css';
 import PropTypes from 'prop-types';
 import ReactQuill from 'react-quill';

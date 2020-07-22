@@ -1,11 +1,11 @@
-import { visibilityReducer } from './visibilityReducer';
+import { VisibilityReducer } from './VisibilityReducer';
 import { DefaultVisibilityState } from '../Templates/DefaultVisibilityState';
 
 describe("visibilityReducer", () => {
 
   it("should return the initial state", () => {
     const expected = DefaultVisibilityState;
-    const result = visibilityReducer(undefined, {});
+    const result = VisibilityReducer(undefined, {});
     expect(expected).toEqual(result);
   })
 
@@ -24,7 +24,7 @@ describe("visibilityReducer", () => {
       "Main Image": true,
       "Content Block Text": true,
       }
-    const result = visibilityReducer(DefaultVisibilityState, {
+    const result = VisibilityReducer(DefaultVisibilityState, {
       type: "TOGGLE_VISIBILITY", payload: {"Header": false}
     });
     expect(expected).toEqual(result);

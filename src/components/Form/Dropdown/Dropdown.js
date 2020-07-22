@@ -6,7 +6,7 @@ import TextField from '../TextField/TextField';
 import ButtonCopyField from '../ButtonCopyField/ButtonCopyField';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { toggleVisibility } from '../../../utils/actions';
+import { toggleVisibility } from '../../../utils/Actions';
 
 const Dropdown = ({ dropdown, formItems, active, toggleVisibility }) => {
 

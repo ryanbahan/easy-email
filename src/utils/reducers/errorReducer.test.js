@@ -1,17 +1,17 @@
-import { errorReducer } from './errorReducer';
+import { ErrorReducer } from './ErrorReducer';
 
 describe("errorReducer", () => {
 
   it("should return the initial state", () => {
     const expected = false;
-    const result = errorReducer(undefined, {});
+    const result = ErrorReducer(undefined, {});
     expect(expected).toEqual(result);
   })
 
   it("should return the error message on ERROR", () => {
     const expected = "Error 404: Page not found";
 
-    const result = errorReducer(false, {
+    const result = ErrorReducer(false, {
       type: "ERROR", payload: {message: "Error 404: Page not found"}
     });
     expect(expected).toEqual(result);
@@ -20,7 +20,7 @@ describe("errorReducer", () => {
   it("should clear error on CLEAR_ERROR", () => {
     const expected = false;
 
-    const result = errorReducer(true, {
+    const result = ErrorReducer(true, {
       type: "CLEAR_ERROR", payload: false
     });
     expect(expected).toEqual(result);

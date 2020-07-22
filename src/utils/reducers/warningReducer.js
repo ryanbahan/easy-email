@@ -1,4 +1,4 @@
-export const warningReducer = (state = false, action) => {
+export const WarningReducer = (state = false, action) => {
   switch (action.type) {
     case 'HAS_WARNING':
       return action.payload

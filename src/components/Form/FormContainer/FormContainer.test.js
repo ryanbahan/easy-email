@@ -1,5 +1,5 @@
 import React from 'react';
-import { Builder } from './Builder';
+import { FormContainer } from './FormContainer';
 import { render } from '@testing-library/react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
@@ -13,10 +13,10 @@ describe("Builder", () => {
   let utils;
 
   global.MutationObserver = class {
-  constructor(callback) {}
-  disconnect() {}
-  observe(element, initObject) {}
-  takeRecords() {return []}
+    constructor(callback) {}
+    disconnect() {}
+    observe(element, initObject) {}
+    takeRecords() {return []}
   };
 
   global.document.getSelection = function() {}
@@ -25,7 +25,7 @@ describe("Builder", () => {
     utils = render(
       <Provider store={store}>
         <Router>
-          <Builder menus={DefaultTemplate} />
+          <FormContainer menus={DefaultTemplate} />
         </Router>
       </Provider>
     );
