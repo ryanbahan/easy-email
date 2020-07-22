@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { Builder } from '../FormComponents/Builder/Builder';
+import { FormContainer } from '../FormComponents/FormContainer/FormContainer';
 import PreviewContainer from '../EmailPreviewComponents/PreviewContainer/PreviewContainer';
 import { DefaultTemplate } from '../../utils/Templates/DefaultTemplate';
 import ErrorPage from '../ErrorPage/ErrorPage';
@@ -14,7 +14,7 @@ const App = (props) => {
       <div className="App">
         {props.error && <Redirect to="/error" />}
         <Route exact path="/">
-          <Builder menus={DefaultTemplate} />
+          <FormContainer menus={DefaultTemplate} />
           <PreviewContainer />
         </Route>
         <Route path="/tone-analysis">
