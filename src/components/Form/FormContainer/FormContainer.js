@@ -1,10 +1,10 @@
 import React from 'react';
-import './Builder.css';
+import './FormContainer.css';
 import DropdownContainer from '../DropdownContainer/DropdownContainer';
 import Exporter from '../Exporter/Exporter';
 import PropTypes from 'prop-types';
 
-export const Builder = ({ menus }) => {
+export const FormContainer = ({ menus }) => {
 
   const menuContainers = menus.map(menu => (
     <DropdownContainer
@@ -26,6 +26,6 @@ export const Builder = ({ menus }) => {
   )
 }
 
-Builder.propTypes = {
+FormContainer.propTypes = {
   menus: PropTypes.array,
 }

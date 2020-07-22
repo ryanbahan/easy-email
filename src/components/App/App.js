@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import { Builder } from '../FormComponents/Builder/Builder';
-import PreviewContainer from '../EmailPreviewComponents/PreviewContainer/PreviewContainer';
+import { FormContainer } from '../Form/FormContainer/FormContainer';
+import PreviewContainer from '../EmailPreview/PreviewContainer/PreviewContainer';
 import { DefaultTemplate } from '../../utils/Templates/DefaultTemplate';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import { Route, Redirect } from 'react-router-dom';
@@ -14,7 +14,7 @@ const App = (props) => {
       <div className="App">
         {props.error && <Redirect to="/error" />}
         <Route exact path="/">
-          <Builder menus={DefaultTemplate} />
+          <FormContainer menus={DefaultTemplate} />
           <PreviewContainer />
         </Route>
         <Route path="/tone-analysis">
