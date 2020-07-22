@@ -1,6 +1,6 @@
 import Chart from 'chart.js';
 
-export const CreateChart = (
+export const createChart = (
   ref,
   data,
   type="bar"
