@@ -1,26 +1,26 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { clearWarning } from '../../utils/actions';
 import PropTypes from 'prop-types';
 import './WarningModal.css';
 
-class ErrorPage extends React.Component {
+const WarningModal = ({ warning, clearWarning }) => {
 
-  componentWillUnmount() {
-    this.props.clearWarning();
+  useEffect(() => {
+    return function cleanup() {
+      clearWarning();
+    };
+  })
+
+  const closeModal = (e) => {
+    clearWarning();
   }
 
-  closeModal = (e) => {
-    this.props.clearWarning();
-  }
-
-  render() {
-      return (
-          <div className="warning-block">
-            <p>{this.props.warning}</p>
-          </div>
-    )
-  }
+  return (
+      <div className="warning-block">
+        <p>{ warning }</p>
+      </div>
+  )
 }
 
 const mapStateToProps = state => ({
@@ -31,7 +31,7 @@ const mapDispatchToProps = dispatch => ({
   clearWarning: () => dispatch(clearWarning()),
 })
 
-ErrorPage.propTypes = {
+WarningModal.propTypes = {
   error: PropTypes.oneOfType([
   PropTypes.string,
   PropTypes.bool
@@ -39,4 +39,4 @@ ErrorPage.propTypes = {
   clearWarning: PropTypes.func,
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(ErrorPage);
+export default connect(mapStateToProps, mapDispatchToProps)(WarningModal);
