@@ -8,9 +8,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { toggleVisibility } from '../../../utils/actions';
 
-class Dropdown extends React.Component {
+const Dropdown = ({ dropdown, formItems, active, toggleVisibility }) => {
 
-  getFormComponent = (item) => {
+  const getFormComponent = (item) => {
     switch (item.component) {
       case "ButtonCopyField":
         return <ButtonCopyField store={item.store} constraints={item.constraints} />
@@ -25,31 +25,29 @@ class Dropdown extends React.Component {
     }
   }
 
-  toggleChecked = (item) => {
-    this.props.toggleVisibility({[item]: !this.props.active[item]})
+  const toggleChecked = (item) => {
+    toggleVisibility({[item]: !active[item]})
   }
 
-  getFormItems = () => {
-    return this.props.formItems.map(item =>
+  const getFormItems = () => {
+    return formItems.map(item =>
       ( <div className="form-item" key={item.title}>
           <div className="form-title-wrapper">
-            {item.checkbox && <input type="checkbox" onClick={() => this.toggleChecked(item.title)} defaultChecked={this.props.active} style={{cursor: "pointer"}}/>}
+            {item.checkbox && <input type="checkbox" onClick={() => toggleChecked(item.title)} defaultChecked={active} style={{cursor: "pointer"}}/>}
             {item.checkbox && <p style={{fontSize: "0.85rem", marginLeft: "0.25rem"}}>{item.title}</p>}
             {!item.checkbox && <p style={{fontSize: "0.85rem", marginLeft: "1.4rem"}}>{item.title}</p>}
           </div>
-          {this.getFormComponent(item)}
+          {getFormComponent(item)}
         </div>
       )
     );
   }
 
-  render() {
-    return (
-      <div className={this.props.dropdown ? "dropdown" : "hidden dropdown"}>
-        {this.getFormItems()}
-      </div>
-    )
-  }
+  return (
+    <div className={dropdown ? "dropdown" : "hidden dropdown"}>
+      {getFormItems()}
+    </div>
+  )
 }
 
 const mapDispatchToProps = (dispatch) => ({
