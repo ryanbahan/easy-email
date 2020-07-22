@@ -12,10 +12,6 @@ const WarningModal = ({ warning, clearWarning }) => {
     };
   })
 
-  const closeModal = (e) => {
-    clearWarning();
-  }
-
   return (
       <div className="warning-block">
         <p>{ warning }</p>
