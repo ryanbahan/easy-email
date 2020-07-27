@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import { clearWarning } from '../../utils/actions';
+import { clearWarning } from '../../redux/actions';
 import PropTypes from 'prop-types';
 import './Warning.css';
 

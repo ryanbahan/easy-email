@@ -1,4 +1,4 @@
-import { DefaultState } from '../Templates/DefaultState';
+import { DefaultState } from '../../utils/Templates/DefaultState';
 
 export const formReducer = (state = DefaultState, action) => {
   switch (action.type) {
