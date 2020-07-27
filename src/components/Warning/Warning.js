@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { clearWarning } from '../../utils/actions';
 import PropTypes from 'prop-types';
-import './WarningModal.css';
+import './Warning.css';
 
 const WarningModal = ({ warning, clearWarning }) => {
 
