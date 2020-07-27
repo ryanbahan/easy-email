@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { isLoading, hasError } from '../../utils/actions';
+import { isLoading, hasError } from '../../redux/actions';
 import { createChart } from '../../utils/createChart';
 import { requestTones } from '../../utils/requestTones';
 import './Analyzer.css';
