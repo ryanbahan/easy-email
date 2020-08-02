@@ -1,12 +1,13 @@
 export const DefaultTemplate = [{
   title: "Header",
+  component: "Header",
   formItems: [
     {
       title: "Company Logo",
       component: "FileUploader",
       store: "companyImage",
       checkbox: true,
-      placeholder: process.env.PUBLIC_URL + '/placeholder-image.png',
+      placeholder: 'https://easyemail.app/placeholder-image.png',
     },
     {
       title: "Company Name",
@@ -41,18 +42,20 @@ export const DefaultTemplate = [{
 },
 {
   title: "Main Image",
+  component: "Image",
   formItems: [
     {
       title: "Image",
       component: "FileUploader",
       store: "mainImage",
       checkbox: false,
-      placeholder: process.env.PUBLIC_URL + '/placeholder-image.png',
+      placeholder: 'https://easyemail.app/placeholder-image.png',
     },
   ],
 },
 {
   title: "Image Banner",
+  component: "Banner",
   formItems: [
     {
       title: "Banner Text",
@@ -110,6 +113,7 @@ export const DefaultTemplate = [{
 },
 {
   title: "Main Content",
+  component: "Content",
   formItems: [
     {
       title: "Content Block Text",
@@ -123,6 +127,7 @@ export const DefaultTemplate = [{
 },
 {
   title: "Call to Action",
+  component: "CTA",
   formItems: [
     {
       title: "CTA Button Text",
@@ -156,6 +161,7 @@ export const DefaultTemplate = [{
 },
 {
   title: "Footer",
+  component: "Footer",
   formItems: [
     {
       title: "Company Address",

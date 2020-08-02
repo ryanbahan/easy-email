@@ -5,19 +5,36 @@ import EmailImageTagline from '../EmailImageTagline/EmailImageTagline';
 import EmailContent from '../EmailContent/EmailContent';
 import EmailFooter from '../EmailFooter/EmailFooter';
 import EmailCTA from '../EmailCTA/EmailCTA';
+import { connect } from 'react-redux';
 import './Preview.css';
 
-const Preview = () => {
+const getComponent = (str) => {
+  switch (str) {
+    case "Header":
+      return <EmailHeader key={str} />
+    case "Image":
+      return <EmailImage key={str} />
+    case "Banner":
+      return <EmailImageTagline key={str} />
+    case "Content":
+      return <EmailContent key={str} />
+    case "CTA":
+      return <EmailCTA key={str} />
+    case "Footer":
+      return <EmailFooter key={str} />
+  }
+}
+
+const Preview = ({ components }) => {
   return (
     <div className="preview" style={{margin: "25px"}}>
-      <EmailHeader />
-      <EmailImage />
-      <EmailImageTagline />
-      <EmailContent />
-      <EmailCTA />
-      <EmailFooter />
+      { components.map(component => getComponent(component)) }
     </div>
   )
 }
 
-export default Preview;
+const mapStateToProps = state => ({
+  components: state.components
+})
+
+export default connect(mapStateToProps)(Preview);

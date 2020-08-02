@@ -24,3 +24,10 @@ export const getVisibilityState = (arr) => {
     return obj
   }, {})
 }
+
+export const getPreviewComponents = (arr) => {
+  return arr.reduce((arr, item) => {
+    arr.push(item.component)
+    return arr
+  }, [])
+}
