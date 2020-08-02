@@ -44,7 +44,7 @@ const Dropdown = ({ dropdownActive, formItems, active, toggleVisibility }) => {
   }
 
   return (
-    <div className={dropdown ? "dropdown" : "hidden dropdown"}>
+    <div className={dropdownActive ? "dropdown" : "hidden dropdown"}>
       {getFormItems()}
     </div>
   )
@@ -54,7 +54,7 @@ const mapDispatchToProps = (dispatch) => ({
   toggleVisibility: (title, bool) => dispatch(toggleVisibility(title, bool))
 })
 
-const mapStateToProps = (state, ownProps) => ({
+const mapStateToProps = state => ({
   active: state.visibility,
 })
 
