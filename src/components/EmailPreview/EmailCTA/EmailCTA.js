@@ -31,8 +31,8 @@ const mapStateToProps = state => ({
   cta: state.form.cta,
   buttonColor: state.form.ctaButtonColor,
   buttonFontColor: state.form.ctaButtonFontColor,
-  active: state.visibility["Main Content"],
-  buttonActive: state.visibility["CTA Button Text"],
+  active: state.visibility["Call to Action"],
+  buttonActive: state.visibility["Call to Action"],
   link: state.form["ctaButtonLink"]
 })
 
