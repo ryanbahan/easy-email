@@ -1,6 +1,7 @@
-import { DefaultVisibilityState } from '../../utils/Templates/DefaultVisibilityState';
+import { DefaultTemplate } from '../../utils/Templates/DefaultTemplate';
+import { getVisibilityState } from '../../utils';
 
-export const visibilityReducer = (state = DefaultVisibilityState, action) => {
+export const visibilityReducer = (state = getVisibilityState(DefaultTemplate), action) => {
   switch (action.type) {
     case 'TOGGLE_VISIBILITY':
       return {...state, ...action.payload};
