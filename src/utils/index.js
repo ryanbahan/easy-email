@@ -1,5 +1,12 @@
-export const getFormState = (arr) => {
+export const getDefaultState = (arr) => {
   return arr.reduce((obj, item) => {
+
+    item.formItems.forEach(formItem => {
+      if (formItem.placeholder !== undefined) {
+        obj[formItem.store] = formItem.placeholder
+      }
+    })
+
     return obj
   }, {})
 }
@@ -13,7 +20,7 @@ export const getVisibilityState = (arr) => {
         obj[formItem.title] = true
       }
     })
-    
+
     return obj
   }, {})
 }

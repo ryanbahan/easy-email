@@ -5,21 +5,24 @@ export const DefaultTemplate = [{
       title: "Company Logo",
       component: "FileUploader",
       store: "companyImage",
-      checkbox: true
+      checkbox: true,
+      placeholder: process.env.PUBLIC_URL + '/placeholder-image.png',
     },
     {
       title: "Company Name",
       component: "ButtonCopyField",
       constraints: {maxLength: 40},
       store: "companyName",
-      checkbox: true
+      checkbox: true,
+      placeholder: 'Company Name',
     },
     {
       title: "Header Link",
       component: "ButtonCopyField",
       constraints: {maxLength: Infinity},
       store: "headerLink",
-      checkbox: false
+      checkbox: false,
+      placeholder: "",
     },
     {
       title: "Font Color",
@@ -31,7 +34,8 @@ export const DefaultTemplate = [{
       title: "Background Color",
       component: "Colorpicker",
       store: "headerBGColor",
-      checkbox: false
+      checkbox: false,
+      placeholder: "#ffffff",
     },
   ],
 },
@@ -42,7 +46,8 @@ export const DefaultTemplate = [{
       title: "Image",
       component: "FileUploader",
       store: "mainImage",
-      checkbox: false
+      checkbox: false,
+      placeholder: process.env.PUBLIC_URL + '/placeholder-image.png',
     },
   ],
 },
@@ -54,13 +59,15 @@ export const DefaultTemplate = [{
       component: "TextField",
       constraints: {maxLength: 65},
       store: "mainImageTagline",
-      checkbox: true
+      checkbox: true,
+      placeholder: 'Your amazing call-to-action here!',
     },
     {
       title: "Background Color",
       component: "Colorpicker",
       store: "mainImageTaglineBG",
-      checkbox: false
+      checkbox: false,
+      placeholder: "#ffffff",
     },
     {
       title: "Font Color",
@@ -76,14 +83,16 @@ export const DefaultTemplate = [{
       component: "ButtonCopyField",
       constraints: {maxLength: 25},
       store: "mainImageButtonCopy",
-      checkbox: true
+      checkbox: true,
+      placeholder: 'Free Download',
     },
     {
       title: "Banner Button Link",
       component: "ButtonCopyField",
       constraints: {maxLength: Infinity},
       store: "mainImageButtonLink",
-      checkbox: false
+      checkbox: false,
+      placeholder: "",
     },
     {
       title: "Button Color",
@@ -107,21 +116,24 @@ export const DefaultTemplate = [{
       component: "TextField",
       constraints: {maxLength: 1000},
       store: "content",
-      checkbox: true
+      checkbox: true,
+      placeholder: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
     },
     {
       title: "CTA Button Text",
       component: "ButtonCopyField",
       constraints: {maxLength: 50},
       store: "cta",
-      checkbox: true
+      checkbox: true,
+      placeholder: 'Call Now',
     },
     {
       title: "CTA Button Link",
       component: "ButtonCopyField",
       store: "ctaButtonLink",
       constraints: {maxLength: Infinity},
-      checkbox: false
+      checkbox: false,
+      placeholder: ""
     },
     {
       title: "Button Color",
@@ -144,7 +156,8 @@ export const DefaultTemplate = [{
       title: "Company Address",
       component: "TextField",
       constraints: {maxLength: 250},
-      store: "footerAddress"
+      store: "footerAddress",
+      placeholder: 'Company Address',
     },
     {
       title: "Font Color",
@@ -154,7 +167,8 @@ export const DefaultTemplate = [{
     {
       title: "Background Color",
       component: "Colorpicker",
-      store: "footerBGColor"
+      store: "footerBGColor",
+      placeholder: "#ffffff",
     },
   ],
 }]

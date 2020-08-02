@@ -1,6 +1,7 @@
-import { DefaultState } from '../../utils/Templates/DefaultState';
+import { DefaultTemplate } from '../../utils/Templates/DefaultTemplate';
+import { getDefaultState } from '../../utils';
 
-export const formReducer = (state = DefaultState, action) => {
+export const formReducer = (state = getDefaultState(DefaultTemplate), action) => {
   switch (action.type) {
     case 'UPDATE':
       return {...state, ...action.payload}
