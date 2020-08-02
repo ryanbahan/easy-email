@@ -26,7 +26,7 @@ const DropdownContainer = ({ toggleVisibility, title, active, formItems }) => {
         <p className="dropdown-toggle" onClick={() => toggleDropdown()}>+</p>
       </div>
       <Dropdown
-        dropdown={state.dropdown}
+        dropdownActive={state.dropdown}
         formItems={formItems}
       />
     </div>

@@ -8,7 +8,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { toggleVisibility } from '../../../redux/actions';
 
-const Dropdown = ({ dropdown, formItems, active, toggleVisibility }) => {
+const Dropdown = ({ dropdownActive, formItems, active, toggleVisibility }) => {
 
   const getFormComponent = (item) => {
     switch (item.component) {
