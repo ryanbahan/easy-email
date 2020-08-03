@@ -1,34 +1,44 @@
-export const update = content => ({
-  type: "UPDATE",
-  payload: content,
-})
+export const update = (obj) => ({
+	type: 'UPDATE',
+	payload: obj
+});
 
-export const toggleVisibility = bool => ({
-  type: "TOGGLE_VISIBILITY",
-  payload: bool,
-})
+export const updateItem = (obj) => ({
+	type: 'UPDATE_ITEM',
+	payload: obj
+});
 
-export const isLoading = bool => ({
-  type: "IS_LOADING",
-  payload: bool,
-})
+export const toggleComponentVisibility = (obj) => ({
+	type: 'TOGGLE_COMPONENT_VISIBILITY',
+	payload: obj
+});
 
-export const hasError = err => ({
-  type: "ERROR",
-  payload: err,
-})
+export const toggleItemVisibility = (obj) => ({
+	type: 'TOGGLE_ITEM_VISIBILITY',
+	payload: obj
+});
+
+export const isLoading = (bool) => ({
+	type: 'IS_LOADING',
+	payload: bool
+});
+
+export const hasError = (err) => ({
+	type: 'ERROR',
+	payload: err
+});
 
 export const clearError = () => ({
-  type: "CLEAR_ERROR",
-  payload: false,
-})
+	type: 'CLEAR_ERROR',
+	payload: false
+});
 
-export const hasWarning = warning => ({
-  type: "HAS_WARNING",
-  payload: warning,
-})
+export const hasWarning = (warning) => ({
+	type: 'HAS_WARNING',
+	payload: warning
+});
 
 export const clearWarning = () => ({
-  type: "CLEAR_WARNING",
-  payload: false,
-})
+	type: 'CLEAR_WARNING',
+	payload: false
+});
