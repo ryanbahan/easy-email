@@ -157,25 +157,26 @@ export const DefaultTemplate = {
 					value: ''
 				}
 			]
+		},
+		{
+			templateID: 1,
+			id: 4,
+			title: 'Main Content',
+			component: 'Content',
+			active: true,
+			formItems: [
+				{
+					componentID: 4,
+					id: 14,
+					title: 'Content Block Text',
+					component: 'TextField',
+					constraints: { maxLength: 1000 },
+					store: 'content',
+					checkbox: false,
+					value: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
+				}
+			]
 		}
-		// {
-		//   templateID: 1,
-		//   id: 4,
-		//   title: "Main Content",
-		//   component: "Content",
-		//   active: true,
-		//   formItems: [
-		//     {
-		//       title: "Content Block Text",
-		//       component: "TextField",
-		//       constraints: { maxLength: 1000 },
-		//       store: "content",
-		//       checkbox: true,
-		//       active: true,
-		//       value: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
-		//     },
-		//   ],
-		// },
 		// {
 		//   templateID: 1,
 		//   id: 5,

@@ -48,8 +48,6 @@ const mapStateToProps = (state, ownProps) => {
 		.find((c) => c.id === ownProps.componentID)
 		.formItems.find((f) => f.id === ownProps.id).value;
 
-	console.log('content', content);
-
 	return {
 		content: content,
 		warning: state.warning.store
