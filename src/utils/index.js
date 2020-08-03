@@ -1,5 +1,5 @@
-export const getDefaultState = (arr) => {
-  return arr.reduce((obj, item) => {
+export const getDefaultState = (template) => {
+  return template.components.reduce((obj, item) => {
 
     item.formItems.forEach(formItem => {
       if (formItem.placeholder !== undefined) {
@@ -11,8 +11,8 @@ export const getDefaultState = (arr) => {
   }, {})
 }
 
-export const getVisibilityState = (arr) => {
-  return arr.reduce((obj, item) => {
+export const getVisibilityState = (template) => {
+  return template.components.reduce((obj, item) => {
     obj[item.title] = true
 
     item.formItems.forEach(formItem => {
@@ -23,11 +23,4 @@ export const getVisibilityState = (arr) => {
 
     return obj
   }, {})
-}
-
-export const getPreviewComponents = (arr) => {
-  return arr.reduce((arr, item) => {
-    arr.push(item.component)
-    return arr
-  }, [])
 }

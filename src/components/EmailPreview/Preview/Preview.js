@@ -28,7 +28,7 @@ const getComponent = (obj) => {
 const Preview = ({ template }) => {
   return (
     <div className="preview" style={{margin: "25px"}}>
-      { template.map(component => getComponent(component)) }
+      { template.components.map(component => getComponent(component)) }
     </div>
   )
 }

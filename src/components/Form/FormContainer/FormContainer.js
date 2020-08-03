@@ -7,7 +7,7 @@ import PropTypes from 'prop-types';
 
 const FormContainer = ({ template }) => {
 
-  const menuContainers = template.map(menu => (
+  const menuContainers = template.components.map(menu => (
     <DropdownContainer
       key={menu.title}
       formItems={menu.formItems}

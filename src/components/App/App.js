@@ -2,7 +2,6 @@ import React from 'react';
 import './App.css';
 import FormContainer from '../Form/FormContainer/FormContainer';
 import PreviewContainer from '../EmailPreview/PreviewContainer/PreviewContainer';
-import { DefaultTemplate } from '../../utils/Templates/DefaultTemplate';
 import ErrorPage from '../ErrorPage/ErrorPage';
 import { Route, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
