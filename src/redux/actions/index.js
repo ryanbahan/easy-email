@@ -3,6 +3,11 @@ export const update = (content) => ({
 	payload: content
 });
 
+export const updateItem = (content) => ({
+	type: 'UPDATE_ITEM',
+	payload: content
+});
+
 export const toggleComponentVisibility = (bool) => ({
 	type: 'TOGGLE_COMPONENT_VISIBILITY',
 	payload: bool

@@ -5,7 +5,7 @@ import ImageLoadingSpinner from '../../ImageLoadingSpinner/ImageLoadingSpinner';
 import { mapFormItemsToProps } from '../../../utils';
 
 const EmailHeader = ({
-	bgColor,
+	headerBGColor,
 	companyImage,
 	companyImageActive,
 	companyName,
@@ -13,7 +13,7 @@ const EmailHeader = ({
 	companyFontColor,
 	active,
 	loading,
-	link
+	headerLink
 }) => {
 	return active ? (
 		<table
@@ -22,7 +22,7 @@ const EmailHeader = ({
 			cellPadding="0"
 			width="600px"
 			height="105px"
-			style={{ color: companyFontColor, backgroundColor: bgColor }}
+			style={{ color: companyFontColor, backgroundColor: headerBGColor }}
 		>
 			<tbody>
 				<tr>
@@ -33,7 +33,7 @@ const EmailHeader = ({
 								style={{ position: 'relative', width: 'min-content' }}
 							>
 								{loading === 'companyImage' && <ImageLoadingSpinner />}
-								<a href={link}>
+								<a href={headerLink}>
 									<img
 										src={companyImage}
 										alt="Company logo"

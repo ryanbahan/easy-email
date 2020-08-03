@@ -14,13 +14,13 @@ const Dropdown = (props) => {
 	const getFormComponent = (item) => {
 		switch (item.component) {
 			case 'ButtonCopyField':
-				return <ButtonCopyField store={item.store} constraints={item.constraints} />;
+				return <ButtonCopyField componentID={id} {...item} />;
 			case 'Colorpicker':
-				return <Colorpicker store={item.store} constraints={item.constraints} />;
+				return <Colorpicker componentID={id} {...item} />;
 			case 'TextField':
-				return <TextField store={item.store} constraints={item.constraints} />;
+				return <TextField componentID={id} {...item} />;
 			case 'FileUploader':
-				return <FileUploader store={item.store} constraints={item.constraints} />;
+				return <FileUploader componentID={id} {...item} />;
 			default:
 				return null;
 		}
