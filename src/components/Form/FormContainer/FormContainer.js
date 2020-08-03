@@ -6,33 +6,24 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 const FormContainer = ({ template }) => {
+	const menuContainers = template.components.map((item) => <DropdownContainer key={item.id} {...item} />);
 
-  const menuContainers = template.components.map(menu => (
-    <DropdownContainer
-      key={menu.title}
-      formItems={menu.formItems}
-      title={menu.title}
-    />
-  ));
-
-  return (
-  <section className="builder">
-    <div className="menu-containers-wrapper">
-      {menuContainers}
-    </div>
-    <div className="buttons-wrapper">
-      <Exporter />
-    </div>
-  </section>
-  )
-}
+	return (
+		<section className="builder">
+			<div className="menu-containers-wrapper">{menuContainers}</div>
+			<div className="buttons-wrapper">
+				<Exporter />
+			</div>
+		</section>
+	);
+};
 
 FormContainer.propTypes = {
-  menus: PropTypes.array,
-}
+	menus: PropTypes.array
+};
 
-const mapStateToProps = state => ({
-  template: state.template
-})
+const mapStateToProps = (state) => ({
+	template: state.template
+});
 
-export default connect(mapStateToProps)(FormContainer)
+export default connect(mapStateToProps)(FormContainer);
