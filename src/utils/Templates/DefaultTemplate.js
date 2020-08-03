@@ -10,6 +10,7 @@ export const DefaultTemplate = {
 			active: true,
 			formItems: [
 				{
+					componentID: 1,
 					id: 1,
 					title: 'Company Logo',
 					component: 'FileUploader',
@@ -19,6 +20,7 @@ export const DefaultTemplate = {
 					value: 'https://easyemail.app/placeholder-image.png'
 				},
 				{
+					componentID: 1,
 					id: 2,
 					title: 'Company Name',
 					component: 'ButtonCopyField',
@@ -29,6 +31,7 @@ export const DefaultTemplate = {
 					value: 'Company Name'
 				},
 				{
+					componentID: 1,
 					id: 3,
 					title: 'Header Link',
 					component: 'ButtonCopyField',
@@ -38,6 +41,7 @@ export const DefaultTemplate = {
 					value: ''
 				},
 				{
+					componentID: 1,
 					id: 4,
 					title: 'Font Color',
 					component: 'Colorpicker',
@@ -46,6 +50,7 @@ export const DefaultTemplate = {
 					value: ''
 				},
 				{
+					componentID: 1,
 					id: 5,
 					title: 'Background Color',
 					component: 'Colorpicker',
@@ -54,23 +59,24 @@ export const DefaultTemplate = {
 					value: '#ffffff'
 				}
 			]
+		},
+		{
+			templateID: 1,
+			id: 2,
+			title: 'Main Image',
+			component: 'Image',
+			active: true,
+			formItems: [
+				{
+					componentID: 2,
+					title: 'Image',
+					component: 'FileUploader',
+					store: 'mainImage',
+					checkbox: false,
+					value: 'https://easyemail.app/placeholder-image.png'
+				}
+			]
 		}
-		// {
-		//   templateID: 1,
-		//   id: 2,
-		//   title: "Main Image",
-		//   component: "Image",
-		//   active: true,
-		//   formItems: [
-		//     {
-		//       title: "Image",
-		//       component: "FileUploader",
-		//       store: "mainImage",
-		//       checkbox: false,
-		//       placeholder: 'https://easyemail.app/placeholder-image.png',
-		//     },
-		//   ],
-		// },
 		// {
 		//   templateID: 1,
 		//   id: 3,
