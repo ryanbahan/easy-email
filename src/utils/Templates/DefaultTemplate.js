@@ -69,6 +69,7 @@ export const DefaultTemplate = {
 			formItems: [
 				{
 					componentID: 2,
+					id: 6,
 					title: 'Image',
 					component: 'FileUploader',
 					store: 'mainImage',
@@ -76,70 +77,87 @@ export const DefaultTemplate = {
 					value: 'https://easyemail.app/placeholder-image.png'
 				}
 			]
+		},
+		{
+			templateID: 1,
+			id: 3,
+			title: 'Image Banner',
+			component: 'Banner',
+			active: true,
+			formItems: [
+				{
+					componentID: 3,
+					id: 7,
+					title: 'Banner Text',
+					component: 'TextField',
+					constraints: { maxLength: 65 },
+					store: 'mainImageTagline',
+					checkbox: true,
+					active: true,
+					value: 'Your amazing call-to-action here!'
+				},
+				{
+					componentID: 3,
+					id: 8,
+					title: 'Background Color',
+					component: 'Colorpicker',
+					store: 'mainImageTaglineBG',
+					checkbox: false,
+					value: '#ffffff'
+				},
+				{
+					componentID: 3,
+					id: 9,
+					title: 'Font Color',
+					component: 'Colorpicker',
+					store: 'mainImageFontColor',
+					checkbox: false,
+					value: ''
+				},
+				{
+					title: null
+				},
+				{
+					componentID: 3,
+					id: 10,
+					title: 'Banner Button Text',
+					component: 'ButtonCopyField',
+					constraints: { maxLength: 25 },
+					store: 'mainImageButtonCopy',
+					checkbox: true,
+					active: true,
+					value: 'Free Download'
+				},
+				{
+					componentID: 3,
+					id: 11,
+					title: 'Banner Button Link',
+					component: 'ButtonCopyField',
+					constraints: { maxLength: Infinity },
+					store: 'mainImageButtonLink',
+					checkbox: false,
+					value: ''
+				},
+				{
+					componentID: 3,
+					id: 12,
+					title: 'Button Color',
+					component: 'Colorpicker',
+					store: 'mainImageButtonColor',
+					checkbox: false,
+					value: ''
+				},
+				{
+					componentID: 3,
+					id: 13,
+					title: 'Button Font Color',
+					component: 'Colorpicker',
+					store: 'mainImageButtonFontColor',
+					checkbox: false,
+					value: ''
+				}
+			]
 		}
-		// {
-		//   templateID: 1,
-		//   id: 3,
-		//   title: "Image Banner",
-		//   component: "Banner",
-		//   active: true,
-		//   formItems: [
-		//     {
-		//       title: "Banner Text",
-		//       component: "TextField",
-		//       constraints: { maxLength: 65 },
-		//       store: "mainImageTagline",
-		//       checkbox: true,
-		//       active: true,
-		//       placeholder: 'Your amazing call-to-action here!',
-		//     },
-		//     {
-		//       title: "Background Color",
-		//       component: "Colorpicker",
-		//       store: "mainImageTaglineBG",
-		//       checkbox: false,
-		//       placeholder: "#ffffff",
-		//     },
-		//     {
-		//       title: "Font Color",
-		//       component: "Colorpicker",
-		//       store: "mainImageFontColor",
-		//       checkbox: false,
-		//     },
-		//     {
-		//       title: null
-		//     },
-		//     {
-		//       title: "Banner Button Text",
-		//       component: "ButtonCopyField",
-		//       constraints: { maxLength: 25 },
-		//       store: "mainImageButtonCopy",
-		//       checkbox: true,
-		//       active: true,
-		//       placeholder: 'Free Download',
-		//     },
-		//     {
-		//       title: "Banner Button Link",
-		//       component: "ButtonCopyField",
-		//       constraints: { maxLength: Infinity },
-		//       store: "mainImageButtonLink",
-		//       checkbox: false,
-		//       placeholder: "",
-		//     },
-		//     {
-		//       title: "Button Color",
-		//       component: "Colorpicker",
-		//       store: "mainImageButtonColor",
-		//       checkbox: false,
-		//     },
-		//     {
-		//       title: "Button Font Color",
-		//       component: "Colorpicker",
-		//       store: "mainImageButtonFontColor",
-		//       checkbox: false,
-		//     },
-		//   ],
-		// },
 		// {
 		//   templateID: 1,
 		//   id: 4,
@@ -154,7 +172,7 @@ export const DefaultTemplate = {
 		//       store: "content",
 		//       checkbox: true,
 		//       active: true,
-		//       placeholder: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
+		//       value: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
 		//     },
 		//   ],
 		// },
