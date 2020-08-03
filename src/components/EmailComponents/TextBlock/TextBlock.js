@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Parser from 'html-react-parser';
 import { mapFormItemsToProps } from '../../../utils';
 
-const EmailContent = (props) => {
+const TextBlock = (props) => {
 	const { content, active } = props;
 
 	return active ? (
@@ -29,9 +29,9 @@ const mapStateToProps = (state, ownProps) => {
 	return { ...initialProps, ...addedProps };
 };
 
-EmailContent.propTypes = {
+TextBlock.propTypes = {
 	content: PropTypes.string,
 	active: PropTypes.bool
 };
 
-export default connect(mapStateToProps)(EmailContent);
+export default connect(mapStateToProps)(TextBlock);

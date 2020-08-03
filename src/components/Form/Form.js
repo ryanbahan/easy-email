@@ -1,11 +1,11 @@
 import React from 'react';
-import './FormContainer.css';
-import DropdownContainer from '../DropdownContainer/DropdownContainer';
-import Exporter from '../Exporter/Exporter';
+import './Form.css';
+import DropdownContainer from '../FormComponents/DropdownContainer/DropdownContainer';
+import Exporter from '../FormComponents/Exporter/Exporter';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-const FormContainer = ({ template }) => {
+const Form = ({ template }) => {
 	const menuContainers = template.components.map((item) => <DropdownContainer key={item.id} {...item} />);
 
 	return (
@@ -18,7 +18,7 @@ const FormContainer = ({ template }) => {
 	);
 };
 
-FormContainer.propTypes = {
+Form.propTypes = {
 	menus: PropTypes.array
 };
 
@@ -26,4 +26,4 @@ const mapStateToProps = (state) => ({
 	template: state.template
 });
 
-export default connect(mapStateToProps)(FormContainer);
+export default connect(mapStateToProps)(Form);

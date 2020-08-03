@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import ImageLoadingSpinner from '../../ImageLoadingSpinner/ImageLoadingSpinner';
 import { mapFormItemsToProps } from '../../../utils';
 
-const EmailHeader = ({
+const Header = ({
 	headerBGColor,
 	companyImage,
 	companyImageActive,
@@ -62,7 +62,7 @@ const mapStateToProps = (state, ownProps) => {
 	return { ...initialProps, ...addedProps };
 };
 
-EmailHeader.propTypes = {
+Header.propTypes = {
 	bgColor: PropTypes.string,
 	companyImage: PropTypes.string,
 	companyName: PropTypes.string,
@@ -70,4 +70,4 @@ EmailHeader.propTypes = {
 	active: PropTypes.bool
 };
 
-export default connect(mapStateToProps)(EmailHeader);
+export default connect(mapStateToProps)(Header);

@@ -1,8 +1,0 @@
-.preview {
-  width: 602px;
-  min-height: 100px;
-  max-height: 90vh;
-  border: solid 1px rgba(0,0,0,0.25);
-  border-radius: 0.15rem;
-  overflow: auto;
-}

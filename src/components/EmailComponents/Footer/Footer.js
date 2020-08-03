@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Parser from 'html-react-parser';
 import { mapFormItemsToProps } from '../../../utils';
 
-const EmailFooter = (props) => {
+const Footer = (props) => {
 	const { footerAddress, footerFontColor, footerBGColor, active } = props;
 	return active ? (
 		<table
@@ -36,11 +36,11 @@ const mapStateToProps = (state, ownProps) => {
 	return { ...initialProps, ...addedProps };
 };
 
-EmailFooter.propTypes = {
+Footer.propTypes = {
 	address: PropTypes.string,
 	fontColor: PropTypes.string,
 	bgColor: PropTypes.string,
 	active: PropTypes.bool
 };
 
-export default connect(mapStateToProps)(EmailFooter);
+export default connect(mapStateToProps)(Footer);
