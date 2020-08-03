@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Parser from 'html-react-parser';
 import { mapFormItemsToProps } from '../../../utils';
 
-const EmailContent = (props) => {
+const FullWidthButton = (props) => {
 	const { cta, ctaButtonColor, ctaButtonFontColor, active, ctaButtonLink } = props;
 
 	const buttonStyle = {
@@ -45,11 +45,11 @@ const mapStateToProps = (state, ownProps) => {
 	return { ...initialProps, ...addedProps };
 };
 
-EmailContent.propTypes = {
+FullWidthButton.propTypes = {
 	cta: PropTypes.string,
 	buttonColor: PropTypes.string,
 	buttonFontColor: PropTypes.string,
 	active: PropTypes.bool
 };
 
-export default connect(mapStateToProps)(EmailContent);
+export default connect(mapStateToProps)(FullWidthButton);

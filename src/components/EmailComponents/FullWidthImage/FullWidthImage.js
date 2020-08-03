@@ -4,7 +4,7 @@ import ImageLoadingSpinner from '../../ImageLoadingSpinner/ImageLoadingSpinner';
 import { connect } from 'react-redux';
 import { mapFormItemsToProps } from '../../../utils';
 
-const EmailImage = ({ mainImage, active, loading }) => {
+const FullWidthImage = ({ mainImage, active, loading }) => {
 	return active ? (
 		<div className="placeholder-image-container" style={{ position: 'relative' }}>
 			{loading === 'mainImage' && <ImageLoadingSpinner />}
@@ -24,7 +24,7 @@ const mapStateToProps = (state, ownProps) => {
 	return { ...initialProps, ...addedProps };
 };
 
-EmailImage.propTypes = {
+FullWidthImage.propTypes = {
 	mainImage: PropTypes.string,
 	mainImageTagline: PropTypes.string,
 	mainImageButtonCopy: PropTypes.string,
@@ -33,4 +33,4 @@ EmailImage.propTypes = {
 	active: PropTypes.bool
 };
 
-export default connect(mapStateToProps)(EmailImage);
+export default connect(mapStateToProps)(FullWidthImage);

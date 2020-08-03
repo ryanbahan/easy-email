@@ -162,7 +162,7 @@ export const DefaultTemplate = {
 			templateID: 1,
 			id: 4,
 			title: 'Main Content',
-			component: 'Content',
+			component: 'TextBlock',
 			active: true,
 			formItems: [
 				{
@@ -181,7 +181,7 @@ export const DefaultTemplate = {
 			templateID: 1,
 			id: 5,
 			title: 'Call to Action',
-			component: 'CTA',
+			component: 'FullWidthButton',
 			active: true,
 			formItems: [
 				{

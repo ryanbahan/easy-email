@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import parse, { domToReact } from 'html-react-parser';
 import { mapFormItemsToProps } from '../../../utils';
 
-const EmailImageTagline = ({
+const SubHead = ({
 	mainImageTaglineBG,
 	mainImageTagline,
 	mainImageButtonCopy,
@@ -85,7 +85,7 @@ const mapStateToProps = (state, ownProps) => {
 	return { ...initialProps, ...addedProps };
 };
 
-EmailImageTagline.propTypes = {
+SubHead.propTypes = {
 	mainImageTaglineBG: PropTypes.string,
 	mainImageTagline: PropTypes.string,
 	mainImageButtonCopy: PropTypes.string,
@@ -95,4 +95,4 @@ EmailImageTagline.propTypes = {
 	active: PropTypes.bool
 };
 
-export default connect(mapStateToProps)(EmailImageTagline);
+export default connect(mapStateToProps)(SubHead);
