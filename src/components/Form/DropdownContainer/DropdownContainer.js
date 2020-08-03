@@ -5,7 +5,8 @@ import { connect } from 'react-redux';
 import { toggleComponentVisibility } from '../../../redux/actions';
 import PropTypes from 'prop-types';
 
-const DropdownContainer = ({ toggleComponentVisibility, title, active, formItems, id }) => {
+const DropdownContainer = (props) => {
+	const { toggleComponentVisibility, title, active, formItems, id } = props;
 	const [ state, setState ] = useState({ dropdown: false });
 
 	const toggleChecked = (e) => {
@@ -32,7 +33,7 @@ const DropdownContainer = ({ toggleComponentVisibility, title, active, formItems
 					+
 				</p>
 			</div>
-			<Dropdown dropdownActive={state.dropdown} formItems={formItems} />
+			<Dropdown dropdownActive={state.dropdown} {...props} />
 		</div>
 	);
 };

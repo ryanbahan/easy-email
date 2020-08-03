@@ -8,7 +8,9 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { toggleItemVisibility } from '../../../redux/actions';
 
-const Dropdown = ({ dropdownActive, formItems, active, toggleItemVisibility }) => {
+const Dropdown = (props) => {
+	const { dropdownActive, formItems, toggleItemVisibility, id } = props;
+
 	const getFormComponent = (item) => {
 		switch (item.component) {
 			case 'ButtonCopyField':
@@ -25,8 +27,7 @@ const Dropdown = ({ dropdownActive, formItems, active, toggleItemVisibility }) =
 	};
 
 	const toggleChecked = (item) => {
-		console.log(item);
-		toggleItemVisibility({ id: 1 });
+		toggleItemVisibility({ componentID: id, itemID: item.id, active: !item.active });
 	};
 
 	const getFormItems = () => {
@@ -36,8 +37,8 @@ const Dropdown = ({ dropdownActive, formItems, active, toggleItemVisibility }) =
 					{item.checkbox && (
 						<input
 							type="checkbox"
-							onClick={() => toggleChecked(item.title)}
-							defaultChecked={active}
+							onClick={() => toggleChecked(item)}
+							defaultChecked={item.active}
 							style={{ cursor: 'pointer' }}
 						/>
 					)}
@@ -56,13 +57,9 @@ const mapDispatchToProps = (dispatch) => ({
 	toggleItemVisibility: (title, bool) => dispatch(toggleItemVisibility(title, bool))
 });
 
-const mapStateToProps = (state) => ({
-	active: state.visibility
-});
-
 Dropdown.propTypes = {
 	dropdown: PropTypes.bool,
 	formItems: PropTypes.array
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Dropdown);
+export default connect(null, mapDispatchToProps)(Dropdown);
