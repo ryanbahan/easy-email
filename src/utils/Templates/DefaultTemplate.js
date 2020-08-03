@@ -2,6 +2,8 @@ export const DefaultTemplate = {
   id: 1,
   name: "Marketing Email",
   components: [{
+    templateID: 1,
+    id: 1,
     title: "Header",
     component: "Header",
     formItems: [
@@ -44,6 +46,8 @@ export const DefaultTemplate = {
     ],
   },
   {
+    templateID: 1,
+    id: 2,
     title: "Main Image",
     component: "Image",
     formItems: [
@@ -57,6 +61,8 @@ export const DefaultTemplate = {
     ],
   },
   {
+    templateID: 1,
+    id: 3,
     title: "Image Banner",
     component: "Banner",
     formItems: [
@@ -115,6 +121,8 @@ export const DefaultTemplate = {
     ],
   },
   {
+    templateID: 1,
+    id: 4,
     title: "Main Content",
     component: "Content",
     formItems: [
@@ -129,6 +137,8 @@ export const DefaultTemplate = {
     ],
   },
   {
+    templateID: 1,
+    id: 5,
     title: "Call to Action",
     component: "CTA",
     formItems: [
@@ -163,6 +173,8 @@ export const DefaultTemplate = {
     ],
   },
   {
+    templateID: 1,
+    id: 6,
     title: "Footer",
     component: "Footer",
     formItems: [
