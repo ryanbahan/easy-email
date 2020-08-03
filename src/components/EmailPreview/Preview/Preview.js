@@ -8,33 +8,33 @@ import EmailCTA from '../EmailCTA/EmailCTA';
 import { connect } from 'react-redux';
 import './Preview.css';
 
-const getComponent = (str) => {
-  switch (str) {
+const getComponent = (obj) => {
+  switch (obj.component) {
     case "Header":
-      return <EmailHeader key={str} />
+      return <EmailHeader key={obj.title} {...obj} />
     case "Image":
-      return <EmailImage key={str} />
+      return <EmailImage key={obj.title} {...obj} />
     case "Banner":
-      return <EmailImageTagline key={str} />
+      return <EmailImageTagline key={obj.title} {...obj} />
     case "Content":
-      return <EmailContent key={str} />
+      return <EmailContent key={obj.title} {...obj} />
     case "CTA":
-      return <EmailCTA key={str} />
+      return <EmailCTA key={obj.title} {...obj} />
     case "Footer":
-      return <EmailFooter key={str} />
+      return <EmailFooter key={obj.title} {...obj} />
   }
 }
 
-const Preview = ({ components }) => {
+const Preview = ({ template }) => {
   return (
     <div className="preview" style={{margin: "25px"}}>
-      { components.map(component => getComponent(component)) }
+      { template.map(component => getComponent(component)) }
     </div>
   )
 }
 
 const mapStateToProps = state => ({
-  components: state.components
+  template: state.template
 })
 
 export default connect(mapStateToProps)(Preview);
