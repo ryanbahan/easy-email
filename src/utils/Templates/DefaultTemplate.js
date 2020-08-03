@@ -176,44 +176,54 @@ export const DefaultTemplate = {
 					value: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.`
 				}
 			]
+		},
+		{
+			templateID: 1,
+			id: 5,
+			title: 'Call to Action',
+			component: 'CTA',
+			active: true,
+			formItems: [
+				{
+					componentID: 5,
+					id: 15,
+					title: 'CTA Button Text',
+					component: 'ButtonCopyField',
+					constraints: { maxLength: 50 },
+					store: 'cta',
+					checkbox: false,
+					value: 'Call Now'
+				},
+				{
+					componentID: 5,
+					id: 16,
+					title: 'CTA Button Link',
+					component: 'ButtonCopyField',
+					store: 'ctaButtonLink',
+					constraints: { maxLength: Infinity },
+					checkbox: false,
+					value: ''
+				},
+				{
+					componentID: 5,
+					id: 17,
+					title: 'Button Color',
+					component: 'Colorpicker',
+					store: 'ctaButtonColor',
+					checkbox: false,
+					value: ''
+				},
+				{
+					componentID: 5,
+					id: 18,
+					title: 'Button Font Color',
+					component: 'Colorpicker',
+					store: 'ctaButtonFontColor',
+					checkbox: false,
+					value: ''
+				}
+			]
 		}
-		// {
-		//   templateID: 1,
-		//   id: 5,
-		//   title: "Call to Action",
-		//   component: "CTA",
-		//   active: true,
-		//   formItems: [
-		//     {
-		//       title: "CTA Button Text",
-		//       component: "ButtonCopyField",
-		//       constraints: { maxLength: 50 },
-		//       store: "cta",
-		//       checkbox: false,
-		//       placeholder: 'Call Now',
-		//     },
-		//     {
-		//       title: "CTA Button Link",
-		//       component: "ButtonCopyField",
-		//       store: "ctaButtonLink",
-		//       constraints: { maxLength: Infinity },
-		//       checkbox: false,
-		//       placeholder: ""
-		//     },
-		//     {
-		//       title: "Button Color",
-		//       component: "Colorpicker",
-		//       store: "ctaButtonColor",
-		//       checkbox: false,
-		//     },
-		//     {
-		//       title: "Button Font Color",
-		//       component: "Colorpicker",
-		//       store: "ctaButtonFontColor",
-		//       checkbox: false,
-		//     },
-		//   ],
-		// },
 		// {
 		//   templateID: 1,
 		//   id: 6,
@@ -226,7 +236,7 @@ export const DefaultTemplate = {
 		//       component: "TextField",
 		//       constraints: { maxLength: 250 },
 		//       store: "footerAddress",
-		//       placeholder: 'Company Address',
+		//       value: 'Company Address',
 		//     },
 		//     {
 		//       title: "Font Color",
@@ -237,7 +247,7 @@ export const DefaultTemplate = {
 		//       title: "Background Color",
 		//       component: "Colorpicker",
 		//       store: "footerBGColor",
-		//       placeholder: "#ffffff",
+		//       value: "#ffffff",
 		//     },
 		//   ],
 		// }]
