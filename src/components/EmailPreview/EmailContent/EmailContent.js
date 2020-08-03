@@ -26,14 +26,8 @@ const mapStateToProps = (state, ownProps) => {
 		loading: state.loading
 	};
 
-	return { ...initialProps, addedProps };
+	return { ...initialProps, ...addedProps };
 };
-
-// const mapStateToProps = state => ({
-//   content: state.form.content,
-//   active: state.visibility["Main Content"],
-//   contentActive: state.visibility["Content Block Text"],
-// })
 
 EmailContent.propTypes = {
 	content: PropTypes.string,

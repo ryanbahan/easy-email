@@ -1,21 +1,21 @@
-export const update = (content) => ({
+export const update = (obj) => ({
 	type: 'UPDATE',
-	payload: content
+	payload: obj
 });
 
-export const updateItem = (content) => ({
+export const updateItem = (obj) => ({
 	type: 'UPDATE_ITEM',
-	payload: content
+	payload: obj
 });
 
-export const toggleComponentVisibility = (bool) => ({
+export const toggleComponentVisibility = (obj) => ({
 	type: 'TOGGLE_COMPONENT_VISIBILITY',
-	payload: bool
+	payload: obj
 });
 
-export const toggleItemVisibility = (bool) => ({
+export const toggleItemVisibility = (obj) => ({
 	type: 'TOGGLE_ITEM_VISIBILITY',
-	payload: bool
+	payload: obj
 });
 
 export const isLoading = (bool) => ({

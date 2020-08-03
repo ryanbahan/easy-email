@@ -59,7 +59,7 @@ const mapStateToProps = (state, ownProps) => {
 		loading: state.loading
 	};
 
-	return { ...initialProps, addedProps };
+	return { ...initialProps, ...addedProps };
 };
 
 EmailHeader.propTypes = {

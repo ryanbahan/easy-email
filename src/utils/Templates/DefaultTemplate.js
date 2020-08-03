@@ -223,33 +223,43 @@ export const DefaultTemplate = {
 					value: ''
 				}
 			]
+		},
+		{
+			templateID: 1,
+			id: 6,
+			title: 'Footer',
+			component: 'Footer',
+			active: true,
+			formItems: [
+				{
+					componentID: 6,
+					id: 19,
+					title: 'Company Address',
+					component: 'TextField',
+					constraints: { maxLength: 250 },
+					store: 'footerAddress',
+					value: 'Company Address',
+					checkbox: false
+				},
+				{
+					componentID: 6,
+					id: 20,
+					title: 'Font Color',
+					component: 'Colorpicker',
+					store: 'footerFontColor',
+					value: '',
+					checkbox: false
+				},
+				{
+					componentID: 6,
+					id: 21,
+					title: 'Background Color',
+					component: 'Colorpicker',
+					store: 'footerBGColor',
+					checkbox: false,
+					value: '#ffffff'
+				}
+			]
 		}
-		// {
-		//   templateID: 1,
-		//   id: 6,
-		//   title: "Footer",
-		//   component: "Footer",
-		//   active: true,
-		//   formItems: [
-		//     {
-		//       title: "Company Address",
-		//       component: "TextField",
-		//       constraints: { maxLength: 250 },
-		//       store: "footerAddress",
-		//       value: 'Company Address',
-		//     },
-		//     {
-		//       title: "Font Color",
-		//       component: "Colorpicker",
-		//       store: "footerFontColor"
-		//     },
-		//     {
-		//       title: "Background Color",
-		//       component: "Colorpicker",
-		//       store: "footerBGColor",
-		//       value: "#ffffff",
-		//     },
-		//   ],
-		// }]
 	]
 };
