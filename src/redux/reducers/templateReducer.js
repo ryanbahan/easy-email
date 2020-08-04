@@ -1,7 +1,9 @@
 import { DefaultTemplate } from '../../utils/Templates/DefaultTemplate';
 
-export const templateReducer = (state = DefaultTemplate, action) => {
+export const templateReducer = (state = { id: null, name: null, components: [] }, action) => {
 	switch (action.type) {
+		case 'SET_TEMPLATE':
+			return action.payload;
 		case 'TOGGLE_COMPONENT_VISIBILITY':
 			return updateComponentVisibility(state, action);
 		case 'TOGGLE_ITEM_VISIBILITY':
