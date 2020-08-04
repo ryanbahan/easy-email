@@ -1,5 +1,5 @@
-export const update = (obj) => ({
-	type: 'UPDATE',
+export const setTemplate = (obj) => ({
+	type: 'SET_TEMPLATE',
 	payload: obj
 });
 

@@ -1,7 +1,5 @@
 import React from 'react';
 import './App.css';
-import Form from '../components/Form/Form';
-import Preview from '../components/EmailPreview/Preview';
 import ErrorPage from '../pages/ErrorPage/ErrorPage';
 import EasyEmail from '../pages/EasyEmail/EasyEmail';
 import { Route, Redirect } from 'react-router-dom';
